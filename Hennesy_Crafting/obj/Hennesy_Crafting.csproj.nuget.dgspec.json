@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dev_H\\source\\repos\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj": {}
+    "C:\\Users\\Dev_H\\OneDrive\\Documentos\\GitHub\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dev_H\\source\\repos\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj": {
+    "C:\\Users\\Dev_H\\OneDrive\\Documentos\\GitHub\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dev_H\\source\\repos\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj",
+        "projectUniqueName": "C:\\Users\\Dev_H\\OneDrive\\Documentos\\GitHub\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj",
         "projectName": "Hennesy_Crafting",
-        "projectPath": "C:\\Users\\Dev_H\\source\\repos\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj",
+        "projectPath": "C:\\Users\\Dev_H\\OneDrive\\Documentos\\GitHub\\Hennesy_Crafting\\Hennesy_Crafting\\Hennesy_Crafting.csproj",
         "packagesPath": "C:\\Users\\Dev_H\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dev_H\\source\\repos\\Hennesy_Crafting\\Hennesy_Crafting\\obj\\",
+        "outputPath": "C:\\Users\\Dev_H\\OneDrive\\Documentos\\GitHub\\Hennesy_Crafting\\Hennesy_Crafting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\Dev_H\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",

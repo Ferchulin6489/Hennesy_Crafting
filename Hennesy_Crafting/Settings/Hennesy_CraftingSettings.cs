@@ -20,8 +20,9 @@ namespace Hennesy_Crafting.Settings
 
         [Menu("Ver Items Mods", 2, 0)]
         public ToggleNode Ver_Items_Mods { get; set; } = new ToggleNode(true);
+
         [Menu("Debug Mode", 3, 0)]
-        public ToggleNode debugMode = new ToggleNode(false);
+        public ToggleNode debugMode { get; set; } = new ToggleNode(false);
 
         //Item Mods
         public ItemLevelSettings ItemLevel { get; set; } = new ItemLevelSettings();
