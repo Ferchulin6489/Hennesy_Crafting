@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Dev_H\OneDrive\Documentos\Cosas para jueguitos\PoEHelper-3.22.0.1\Plugins\Compiled\PassiveSkillTreePlanter\PassiveSkillTreePlanter.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{368F7E8B-2869-4187-80D1-A01D9E0B0BF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PassiveSkillTreePlanter</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>PassiveSkillTreePlanter</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExileCore" />
+    <Reference Include="ImGui.NET" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Serilog" />
+    <Reference Include="SharpDX.Mathematics" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Process" />
+    <Reference Include="System.Drawing.Primitives" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Text.RegularExpressions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="ESkillTreeType.cs" />
+    <Compile Include="ImGuiExtension.cs" />
+    <Compile Include="PassiveSkillTreePlanter.cs" />
+    <Compile Include="PassiveSkillTreePlanterSettings.cs" />
+    <Compile Include="SkillNode.cs" />
+    <Compile Include="SkillNodeGroup.cs" />
+    <Compile Include="TreeConfig.cs" />
+    <Compile Include="TreeEncoder.cs" />
+    <Compile Include="UrlDecoders\PathOfExileUrlDecoder.cs" />
+    <Compile Include="UrlDecoders\PoePlannerUrlDecoder.cs" />
+    <Compile Include="SkillTreeJson\PoESkillTree.cs" />
+    <Compile Include="SkillTreeJson\Class.cs" />
+    <Compile Include="SkillTreeJson\Ascendancy.cs" />
+    <Compile Include="SkillTreeJson\FlavourTextRect.cs" />
+    <Compile Include="SkillTreeJson\Constants.cs" />
+    <Compile Include="SkillTreeJson\CharacterAttributes.cs" />
+    <Compile Include="SkillTreeJson\Classes.cs" />
+    <Compile Include="SkillTreeJson\Group.cs" />
+    <Compile Include="SkillTreeJson\Node.cs" />
+    <Compile Include="SkillTreeJson\ExpansionJewel.cs" />
+    <Compile Include="SkillTreeJson\Recipe.cs" />
+    <Compile Include="SkillTreeJson\PoESkillTreeJsonDecoder.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
