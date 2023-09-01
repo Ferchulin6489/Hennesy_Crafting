@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Dev_H\OneDrive\Documentos\Cosas para jueguitos\PoEHelper-3.22.0.1\ExileCore.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9CB64A2-8E0E-431B-B1B0-2AB1BD4D7206}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ExileCore</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>ExileCore</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClickableTransparentOverlay">
+      <HintPath>lib\ClickableTransparentOverlay.dll</HintPath>
+    </Reference>
+    <Reference Include="GameOffsets">
+      <HintPath>lib\GameOffsets.dll</HintPath>
+    </Reference>
+    <Reference Include="ImGui.NET">
+      <HintPath>lib\ImGui.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="JM.LinqFaster">
+      <HintPath>lib\JM.LinqFaster.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Locator">
+      <HintPath>lib\Microsoft.Build.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>lib\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ProcessMemoryUtilities">
+      <HintPath>lib\ProcessMemoryUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>lib\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File">
+      <HintPath>lib\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX" />
+    <Reference Include="SharpDX.Mathematics" />
+    <Reference Include="SharpDX.XAudio2">
+      <HintPath>lib\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp">
+      <HintPath>lib\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Collections.Concurrent" />
+    <Reference Include="System.Collections.Specialized" />
+    <Reference Include="System.ComponentModel.Primitives" />
+    <Reference Include="System.Console" />
+    <Reference Include="System.Diagnostics.Process" />
+    <Reference Include="System.Diagnostics.TraceSource" />
+    <Reference Include="System.Drawing.Primitives" />
+    <Reference Include="System.IO.FileSystem.Watcher" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.Linq.Parallel" />
+    <Reference Include="System.Memory" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" />
+    <Reference Include="System.Runtime.InteropServices" />
+    <Reference Include="System.Runtime.Loader" />
+    <Reference Include="System.Text.RegularExpressions" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks.Parallel" />
+    <Reference Include="System.Threading.Thread" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Vanara.PInvoke.DwmApi">
+      <HintPath>lib\Vanara.PInvoke.DwmApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Kernel32">
+      <HintPath>lib\Vanara.PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Multimedia">
+      <HintPath>lib\Vanara.PInvoke.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Shared">
+      <HintPath>lib\Vanara.PInvoke.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32">
+      <HintPath>lib\Vanara.PInvoke.User32.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="ActionOverlay.cs" />
+    <Compile Include="AreaController.cs" />
+    <Compile Include="AreaInstance.cs" />
+    <Compile Include="BaseSettingsPlugin`1.cs" />
+    <Compile Include="CommandExecutor.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="CorePluginSettings.cs" />
+    <Compile Include="CorePerformanceSettings.cs" />
+    <Compile Include="CoreSettings.cs" />
+    <Compile Include="DebugWindow.cs" />
+    <Compile Include="DebugMsgDescription.cs" />
+    <Compile Include="DefaultMemoryBackend.cs" />
+    <Compile Include="EntityCollectSettingsContainer.cs" />
+    <Compile Include="EntityListWrapper.cs" />
+    <Compile Include="PluginBridge.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="GameWindow.cs" />
+    <Compile Include="Graphics.cs" />
+    <Compile Include="IMemoryBackend.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Limits.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="MenuWindow.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="MultiThreadManager.cs" />
+    <Compile Include="ThreadUnit.cs" />
+    <Compile Include="PagedMemoryBackend.cs" />
+    <Compile Include="PluginPanel.cs" />
+    <Compile Include="ProcessPicker.cs" />
+    <Compile Include="SettingsContainer.cs" />
+    <Compile Include="SettingsParser.cs" />
+    <Compile Include="SettingsHolder.cs" />
+    <Compile Include="MyWave.cs" />
+    <Compile Include="SoundController.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="WorldPositionExtensions.cs" />
+    <Compile Include="Shared\BuildError.cs" />
+    <Compile Include="Shared\BuildTarget.cs" />
+    <Compile Include="Shared\BuildWarning.cs" />
+    <Compile Include="Shared\CircularBuffer`1.cs" />
+    <Compile Include="Shared\Constants.cs" />
+    <Compile Include="Shared\Coroutine.cs" />
+    <Compile Include="Shared\WaitRandom.cs" />
+    <Compile Include="Shared\WaitRender.cs" />
+    <Compile Include="Shared\WaitFunction.cs" />
+    <Compile Include="Shared\WaitFunctionTimed.cs" />
+    <Compile Include="Shared\WaitTime.cs" />
+    <Compile Include="Shared\YieldBase.cs" />
+    <Compile Include="Shared\IYieldBase.cs" />
+    <Compile Include="Shared\DebugInformation.cs" />
+    <Compile Include="Shared\HudTexture.cs" />
+    <Compile Include="Shared\IntRange.cs" />
+    <Compile Include="Shared\MsBuildLogger.cs" />
+    <Compile Include="Shared\PluginAssemblyLoadContext.cs" />
+    <Compile Include="Shared\PluginCompiler.cs" />
+    <Compile Include="Shared\PluginManager.cs" />
+    <Compile Include="Shared\PluginWrapper.cs" />
+    <Compile Include="Shared\CoroutineDetails.cs" />
+    <Compile Include="Shared\Runner.cs" />
+    <Compile Include="Shared\SyncTaskMethodBuilder`1.cs" />
+    <Compile Include="Shared\SyncTask`1.cs" />
+    <Compile Include="Shared\SyncTask.cs" />
+    <Compile Include="Shared\SyncAwaiter`1.cs" />
+    <Compile Include="Shared\SyncAwaiter.cs" />
+    <Compile Include="Shared\NextFrameTask.cs" />
+    <Compile Include="Shared\TaskUtils.cs" />
+    <Compile Include="Shared\WinApi.cs" />
+    <Compile Include="Shared\Static\HudSkin.cs" />
+    <Compile Include="Shared\Static\ItemClass.cs" />
+    <Compile Include="Shared\Static\ItemClasses.cs" />
+    <Compile Include="Shared\Nodes\ButtonNode.cs" />
+    <Compile Include="Shared\Nodes\ColorNode.cs" />
+    <Compile Include="Shared\Nodes\ColorNodeConverter.cs" />
+    <Compile Include="Shared\Nodes\CustomNode.cs" />
+    <Compile Include="Shared\Nodes\EmptyNode.cs" />
+    <Compile Include="Shared\Nodes\FileNode.cs" />
+    <Compile Include="Shared\Nodes\FileNodeConverter.cs" />
+    <Compile Include="Shared\Nodes\HotkeyNode.cs" />
+    <Compile Include="Shared\Nodes\ListNode.cs" />
+    <Compile Include="Shared\Nodes\RangeNode`1.cs" />
+    <Compile Include="Shared\Nodes\SortContractResolver.cs" />
+    <Compile Include="Shared\Nodes\StashTabNode.cs" />
+    <Compile Include="Shared\Nodes\TextNode.cs" />
+    <Compile Include="Shared\Nodes\ToggleNode.cs" />
+    <Compile Include="Shared\Nodes\ToggleNodeConverter.cs" />
+    <Compile Include="Shared\Interfaces\IMemory.cs" />
+    <Compile Include="Shared\Interfaces\INativePtrArray.cs" />
+    <Compile Include="Shared\Interfaces\IPattern.cs" />
+    <Compile Include="Shared\Interfaces\IPlugin.cs" />
+    <Compile Include="Shared\Interfaces\ISettings.cs" />
+    <Compile Include="Shared\Interfaces\ISettingsHolder.cs" />
+    <Compile Include="Shared\Interfaces\IStaticCache.cs" />
+    <Compile Include="Shared\Interfaces\IStaticCache`1.cs" />
+    <Compile Include="Shared\Interfaces\IYieldBase.cs" />
+    <Compile Include="Shared\Interfaces\MemoryBackendMode.cs" />
+    <Compile Include="Shared\Helpers\ActionExtensions.cs" />
+    <Compile Include="Shared\Helpers\ConvertHelper.cs" />
+    <Compile Include="Shared\Helpers\DictionaryExtensions.cs" />
+    <Compile Include="Shared\Helpers\Extensions.cs" />
+    <Compile Include="Shared\Helpers\IntPtrExtensions.cs" />
+    <Compile Include="Shared\Helpers\MathHepler.cs" />
+    <Compile Include="Shared\Helpers\MiscHelpers.cs" />
+    <Compile Include="Shared\Helpers\PerformanceTimer.cs" />
+    <Compile Include="Shared\Helpers\PoeMapExtension.cs" />
+    <Compile Include="Shared\Helpers\SpriteHelper.cs" />
+    <Compile Include="Shared\Enums\ActionFlags.cs" />
+    <Compile Include="Shared\Enums\AnimationE.cs" />
+    <Compile Include="Shared\Enums\AreaTransitionType.cs" />
+    <Compile Include="Shared\Enums\BuffEnums.cs" />
+    <Compile Include="Shared\Enums\CharacterClass.cs" />
+    <Compile Include="Shared\Enums\ChestType.cs" />
+    <Compile Include="Shared\Enums\CoroutinePriority.cs" />
+    <Compile Include="Shared\Enums\CreatureType.cs" />
+    <Compile Include="Shared\Enums\DamageType.cs" />
+    <Compile Include="Shared\Enums\DiagnosticInfoType.cs" />
+    <Compile Include="Shared\Enums\Direction.cs" />
+    <Compile Include="Shared\Enums\EntityType.cs" />
+    <Compile Include="Shared\Enums\ProcessAccessRights.cs" />
+    <Compile Include="Shared\Enums\ThreadAccessRights.cs" />
+    <Compile Include="Shared\Enums\MemoryProtectionType.cs" />
+    <Compile Include="Shared\Enums\MemoryAllocationState.cs" />
+    <Compile Include="Shared\Enums\MemoryAllocationType.cs" />
+    <Compile Include="Shared\Enums\MemoryFreeType.cs" />
+    <Compile Include="Shared\Enums\FontAlign.cs" />
+    <Compile Include="Shared\Enums\GameStat.cs" />
+    <Compile Include="Shared\Enums\HeistJobE.cs" />
+    <Compile Include="Shared\Enums\IconPriority.cs" />
+    <Compile Include="Shared\Enums\Influence.cs" />
+    <Compile Include="Shared\Enums\InventoryTabPermissions.cs" />
+    <Compile Include="Shared\Enums\InventoryTabType.cs" />
+    <Compile Include="Shared\Enums\InventoryTabFlags.cs" />
+    <Compile Include="Shared\Enums\InventoryIndex.cs" />
+    <Compile Include="Shared\Enums\InventoryNameE.cs" />
+    <Compile Include="Shared\Enums\InventorySlotE.cs" />
+    <Compile Include="Shared\Enums\InventoryTabMapSeries.cs" />
+    <Compile Include="Shared\Enums\InventoryType.cs" />
+    <Compile Include="Shared\Enums\InventoryTypeE.cs" />
+    <Compile Include="Shared\Enums\ItemRarity.cs" />
+    <Compile Include="Shared\Enums\ItemStatEnum.cs" />
+    <Compile Include="Shared\Enums\LeagueType.cs" />
+    <Compile Include="Shared\Enums\MapIconsIndex.cs" />
+    <Compile Include="Shared\Enums\MapType.cs" />
+    <Compile Include="Shared\Enums\ModDomain.cs" />
+    <Compile Include="Shared\Enums\ModType.cs" />
+    <Compile Include="Shared\Enums\MonsterRarity.cs" />
+    <Compile Include="Shared\Enums\MouseActionType.cs" />
+    <Compile Include="Shared\Enums\MyMapIconsIndex.cs" />
+    <Compile Include="Shared\Enums\NetworkStateE.cs" />
+    <Compile Include="Shared\Enums\OffsetsName.cs" />
+    <Compile Include="Shared\Enums\PantheonGod.cs" />
+    <Compile Include="Shared\Enums\PartyAllocation.cs" />
+    <Compile Include="Shared\Enums\PartyStatus.cs" />
+    <Compile Include="Shared\Enums\SkillGemQualityTypeE.cs" />
+    <Compile Include="Shared\Enums\StatType.cs" />
+    <Compile Include="Shared\Enums\ToolTipType.cs" />
+    <Compile Include="Shared\Cache\AreaCache`1.cs" />
+    <Compile Include="Shared\Cache\Cache.cs" />
+    <Compile Include="Shared\Cache\CachedValue.cs" />
+    <Compile Include="Shared\Cache\CachedValue`1.cs" />
+    <Compile Include="Shared\Cache\CacheUtils.cs" />
+    <Compile Include="Shared\Cache\ConditionalCache`1.cs" />
+    <Compile Include="Shared\Cache\FrameCache`1.cs" />
+    <Compile Include="Shared\Cache\FramesCache`1.cs" />
+    <Compile Include="Shared\Cache\KeyTrackingCache`2.cs" />
+    <Compile Include="Shared\Cache\KeyTrackingCache.cs" />
+    <Compile Include="Shared\Cache\LatancyCache`1.cs" />
+    <Compile Include="Shared\Cache\StaticCache`1.cs" />
+    <Compile Include="Shared\Cache\StaticStringCache.cs" />
+    <Compile Include="Shared\Cache\StaticValueCache`1.cs" />
+    <Compile Include="Shared\Cache\TimeCache`1.cs" />
+    <Compile Include="Shared\Cache\ValidCache`1.cs" />
+    <Compile Include="Shared\Attributes\HideInReflectionAttribute.cs" />
+    <Compile Include="Shared\Attributes\MenuAttribute.cs" />
+    <Compile Include="Shared\Attributes\IgnoreMenuAttribute.cs" />
+    <Compile Include="Shared\Attributes\SubmenuAttribute.cs" />
+    <Compile Include="Shared\Attributes\ConditionalDisplayAttribute.cs" />
+    <Compile Include="Shared\AtlasHelper\AtlasConfigData.cs" />
+    <Compile Include="Shared\AtlasHelper\FrameValue.cs" />
+    <Compile Include="Shared\AtlasHelper\SpriteSourceSizeClass.cs" />
+    <Compile Include="Shared\AtlasHelper\Pivot.cs" />
+    <Compile Include="Shared\AtlasHelper\Size.cs" />
+    <Compile Include="Shared\AtlasHelper\Meta.cs" />
+    <Compile Include="Shared\AtlasHelper\AtlasTexture.cs" />
+    <Compile Include="Shared\AtlasHelper\AtlasTexturesProcessor.cs" />
+    <Compile Include="Shared\Abstract\BaseIcon.cs" />
+    <Compile Include="RenderQ\DX11.cs" />
+    <Compile Include="RenderQ\FontContainer.cs" />
+    <Compile Include="RenderQ\ImGuiRender.cs" />
+    <Compile Include="RenderQ\SpritesRender.cs" />
+    <Compile Include="RenderQ\ThemeEditor.cs" />
+    <Compile Include="RenderQ\ThemeConfig.cs" />
+    <Compile Include="PoEMemory\Component.cs" />
+    <Compile Include="PoEMemory\Element.cs" />
+    <Compile Include="PoEMemory\FileInMemory.cs" />
+    <Compile Include="PoEMemory\FilesContainer.cs" />
+    <Compile Include="PoEMemory\FileInformation.cs" />
+    <Compile Include="PoEMemory\FilesFromMemory.cs" />
+    <Compile Include="PoEMemory\Offsets.cs" />
+    <Compile Include="PoEMemory\Pattern.cs" />
+    <Compile Include="PoEMemory\StringPattern.cs" />
+    <Compile Include="PoEMemory\RemoteMemoryObject.cs" />
+    <Compile Include="PoEMemory\StructuredRemoteMemoryObject`1.cs" />
+    <Compile Include="PoEMemory\Models\BaseItemType.cs" />
+    <Compile Include="PoEMemory\Models\ItemStats.cs" />
+    <Compile Include="PoEMemory\Models\StatTranslator.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ActiveSkillWrapper.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ActorSkill.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ActorSkillCooldown.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SkillCooldown.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ActorVaalSkill.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ProphecyDat.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\AreaTemplate.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\AtlasNode.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryCapturableMonster.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryFamily.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryGenus.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryGroup.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryRecipe.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BestiaryRecipeComponent.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalChoiceAction.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalSyndicateLeadersData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalEventData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalDialogue.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalSyndicateState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\BetrayalUpgrade.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Camera.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\CardTradeWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\CraftBenchWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Cursor.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\DiagnosticElement.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Entity.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\EntityList.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ExpeditionAreaData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\TheGame.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GameState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\AreaLoadingState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GameStateTypes.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GameUi.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GemLvlUpPanel.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GrantedEffectsPerLevel.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\HideoutWrapper.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\IngameData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\IngameState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\IngameUIElements.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\VendorInventory.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\PlayerInventory.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Inventory.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\InventoryHolder.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\InventoryList.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ItemMod.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\LabyrinthData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\LabyrinthRoom.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\LabyrinthSectionAreas.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\LabyrinthSectionOverrides.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MapDeviceWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MapSubInventoryInfo.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MapSubInventoryKey.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MapStashTabElement.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MonsterVariety.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\NativeStringReader.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Quest.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\QuestRewardWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\QuestState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SellWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SellWindowHideout.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SentinelData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SentinelState.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ServerPlayerData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ServerData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ServerInventory.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\ServerStashTab.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\SkillGemWrapper.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\TradeWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\WorldArea.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Metamorph\MetamorphWindowElement.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Metamorph\MetamorphBodyPartStashWindowElement.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Metamorph\MetamorphBodyPartElement.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Heist\HeistChestRecord.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Heist\HeistChestRewardTypeRecord.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Heist\HeistJobRecord.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Heist\HeistNpcRecord.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Ancestor\AncestorFightSelectionWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Ancestor\AncestorFightSelectionOpponentLine.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Ancestor\AncestorMainShopWindow.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\Ancestor\AncestorMainShopWindowOption.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ArchnemesisMod.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BaseItemTypes.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BestiaryCapturableMonsters.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BetrayalChoice.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BetrayalJob.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BetrayalRank.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BetrayalReward.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BetrayalTarget.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BlightTowerDat.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BuffDefinition.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\BuffVisual.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Character.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ChestRecord.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ClientString.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\GrantedEffect.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\GrantedEffectPerLevel.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ItemVisualIdentities.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ItemVisualIdentity.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\LabyrinthTrial.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\LabyrinthTrials.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\LakeRoom.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\ModsDat.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\MonsterVarieties.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\PassiveSkill.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\PassiveSkills.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\PropheciesDat.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\QuestReward.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\QuestRewardOffer.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Quests.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\QuestStates.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\StampChoice.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\StatDescription.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\StatDescriptionStringContainer.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\StatDescriptionWrapper`1.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\StatsDat.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\TagsDat.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\UniqueItemDescription.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\UniqueItemDescriptions.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\UniversalFileWrapper`1.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\WordEntry.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\WorldAreas.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Ultimatum\UltimatumModifier.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Sanctum\SanctumDeferredRewardCategory.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Sanctum\SanctumPersistentEffect.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Sanctum\SanctumRoom.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Sanctum\SanctumRoomType.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Metamorph\MetamorphMetaMonster.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Metamorph\MetamorphMetaSkill.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Metamorph\MetamorphMetaSkillType.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Metamorph\MetamorphRewardType.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Metamorph\MetamorphRewardTypeItemsClient.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Harvest\HarvestSeed.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Atlas\AtlasNodes.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Atlas\AtlasRegion.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Atlas\AtlasRegions.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Archnemesis\ArchnemesisRecipe.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Ancestor\AncestralTrialItem.cs" />
+    <Compile Include="PoEMemory\FilesInMemory\Ancestor\AncestralTrialUnit.cs" />
+    <Compile Include="PoEMemory\Elements\ArchnemesisPanelElement.cs" />
+    <Compile Include="PoEMemory\Elements\ArchnemesisInventorySlot.cs" />
+    <Compile Include="PoEMemory\Elements\ArchnemesisAltarElement.cs" />
+    <Compile Include="PoEMemory\Elements\ArchnemesisAltarInventorySlot.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasPanel.cs" />
+    <Compile Include="PoEMemory\Elements\Atlasbonus.cs" />
+    <Compile Include="PoEMemory\Elements\BanditDialog.cs" />
+    <Compile Include="PoEMemory\Elements\BanditType.cs" />
+    <Compile Include="PoEMemory\Elements\ChatPanel.cs" />
+    <Compile Include="PoEMemory\Elements\DelveElement.cs" />
+    <Compile Include="PoEMemory\Elements\DelveBigCell.cs" />
+    <Compile Include="PoEMemory\Elements\DelveCell.cs" />
+    <Compile Include="PoEMemory\Elements\DelveCellInfoStrings.cs" />
+    <Compile Include="PoEMemory\Elements\EntityLabel.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionDetonator.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionDetonatorInfo.cs" />
+    <Compile Include="PoEMemory\Elements\HarvestWindow.cs" />
+    <Compile Include="PoEMemory\Elements\HarvestCraftElement.cs" />
+    <Compile Include="PoEMemory\Elements\HoverItemIcon.cs" />
+    <Compile Include="PoEMemory\Elements\HPbarElement.cs" />
+    <Compile Include="PoEMemory\Elements\IncursionWindow.cs" />
+    <Compile Include="PoEMemory\Elements\InstanceManagerPanel.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElement.cs" />
+    <Compile Include="PoEMemory\Elements\ItemOnGroundTooltip.cs" />
+    <Compile Include="PoEMemory\Elements\ItemsOnGroundLabelElement.cs" />
+    <Compile Include="PoEMemory\Elements\KalandraTabletWindow.cs" />
+    <Compile Include="PoEMemory\Elements\TabletTileElement.cs" />
+    <Compile Include="PoEMemory\Elements\TabletChoiceElement.cs" />
+    <Compile Include="PoEMemory\Elements\LabelOnGround.cs" />
+    <Compile Include="PoEMemory\Elements\Map.cs" />
+    <Compile Include="PoEMemory\Elements\MapReceptacleWindow.cs" />
+    <Compile Include="PoEMemory\Elements\MapStashTabElementQ.cs" />
+    <Compile Include="PoEMemory\Elements\NpcDialog.cs" />
+    <Compile Include="PoEMemory\Elements\NpcLine.cs" />
+    <Compile Include="PoEMemory\Elements\PoeChatElement.cs" />
+    <Compile Include="PoEMemory\Elements\PurchaseWindow.cs" />
+    <Compile Include="PoEMemory\Elements\ResurrectPanel.cs" />
+    <Compile Include="PoEMemory\Elements\RitualWindow.cs" />
+    <Compile Include="PoEMemory\Elements\SearchBarElement.cs" />
+    <Compile Include="PoEMemory\Elements\SentinelPanel.cs" />
+    <Compile Include="PoEMemory\Elements\SentinelSubPanel.cs" />
+    <Compile Include="PoEMemory\Elements\ShortcutSettings.cs" />
+    <Compile Include="PoEMemory\Elements\SkillBarElement.cs" />
+    <Compile Include="PoEMemory\Elements\SkillElement.cs" />
+    <Compile Include="PoEMemory\Elements\StashElement.cs" />
+    <Compile Include="PoEMemory\Elements\VendorStashTabContainer.cs" />
+    <Compile Include="PoEMemory\Elements\StashTabContainer.cs" />
+    <Compile Include="PoEMemory\Elements\StashTabElement.cs" />
+    <Compile Include="PoEMemory\Elements\StashTopTabSwitcher.cs" />
+    <Compile Include="PoEMemory\Elements\SubMap.cs" />
+    <Compile Include="PoEMemory\Elements\SubterraneanChart.cs" />
+    <Compile Include="PoEMemory\Elements\SyndicatePanel.cs" />
+    <Compile Include="PoEMemory\Elements\TooltipItemFrameElement.cs" />
+    <Compile Include="PoEMemory\Elements\TreePanel.cs" />
+    <Compile Include="PoEMemory\Elements\UltimatumPanel.cs" />
+    <Compile Include="PoEMemory\Elements\WindowState.cs" />
+    <Compile Include="PoEMemory\Elements\WorldMapElement.cs" />
+    <Compile Include="PoEMemory\Elements\Sanctum\SanctumFloorData.cs" />
+    <Compile Include="PoEMemory\Elements\Sanctum\SanctumFloorWindow.cs" />
+    <Compile Include="PoEMemory\Elements\Sanctum\SanctumFloorWindowDataSelector.cs" />
+    <Compile Include="PoEMemory\Elements\Sanctum\SanctumRoomData.cs" />
+    <Compile Include="PoEMemory\Elements\Sanctum\SanctumRoomElement.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\BlightInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\CurrencyInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\DeliriumInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\DelveInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\DivinationInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\EssenceInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\FlaskInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\FragmentInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\GemInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\MapSubInventoryInfo.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\MapSubInventoryKey.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\MapType.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\MapStashTabElement.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\MetamorphInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\InventoryElements\NormalInventoryItem.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionElements\ArtifactSliderElement.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionElements\ExpeditionVendorElement.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionElements\ExpeditionVendorCurrencyInfoElement.cs" />
+    <Compile Include="PoEMemory\Elements\ExpeditionElements\TujenHaggleWindowElement.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasElements\AtlasMasterMissionPanelElement.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasElements\MasterMissionColour.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasElements\VoidStoneFavouriteMapPanelElement.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasElements\VoidStoneInventory.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasElements\VoidStoneSlot.cs" />
+    <Compile Include="PoEMemory\Components\Actor.cs" />
+    <Compile Include="PoEMemory\Components\Animated.cs" />
+    <Compile Include="PoEMemory\Components\AnimationController.cs" />
+    <Compile Include="PoEMemory\Components\ActiveAnimationData.cs" />
+    <Compile Include="PoEMemory\Components\SupportedAnimationList.cs" />
+    <Compile Include="PoEMemory\Components\AnimationStageList.cs" />
+    <Compile Include="PoEMemory\Components\AnimationStage.cs" />
+    <Compile Include="PoEMemory\Components\AreaTransition.cs" />
+    <Compile Include="PoEMemory\Components\Armour.cs" />
+    <Compile Include="PoEMemory\Components\AttributeRequirements.cs" />
+    <Compile Include="PoEMemory\Components\ItemInfoData.cs" />
+    <Compile Include="PoEMemory\Components\Base.cs" />
+    <Compile Include="PoEMemory\Components\Beam.cs" />
+    <Compile Include="PoEMemory\Components\BlightTower.cs" />
+    <Compile Include="PoEMemory\Components\Buff.cs" />
+    <Compile Include="PoEMemory\Components\Buffs.cs" />
+    <Compile Include="PoEMemory\Components\Charges.cs" />
+    <Compile Include="PoEMemory\Components\Chest.cs" />
+    <Compile Include="PoEMemory\Components\ClientAnimationController.cs" />
+    <Compile Include="PoEMemory\Components\ClientBetrayalChoice.cs" />
+    <Compile Include="PoEMemory\Components\CurrencyInfo.cs" />
+    <Compile Include="PoEMemory\Components\DelveLight.cs" />
+    <Compile Include="PoEMemory\Components\DeployedObject.cs" />
+    <Compile Include="PoEMemory\Components\DiesAfterTime.cs" />
+    <Compile Include="PoEMemory\Components\ExpeditionSaga.cs" />
+    <Compile Include="PoEMemory\Components\Flask.cs" />
+    <Compile Include="PoEMemory\Components\HarvestInfrastructure.cs" />
+    <Compile Include="PoEMemory\Components\HarvestInfrastructureModUnmanaged.cs" />
+    <Compile Include="PoEMemory\Components\HarvestInfrastructureMod.cs" />
+    <Compile Include="PoEMemory\Components\HarvestWorldObject.cs" />
+    <Compile Include="PoEMemory\Components\HarvestSeedSpawnDescriptor.cs" />
+    <Compile Include="PoEMemory\Components\HeistBlueprint.cs" />
+    <Compile Include="PoEMemory\Components\HeistContract.cs" />
+    <Compile Include="PoEMemory\Components\HeistEquipment.cs" />
+    <Compile Include="PoEMemory\Components\HeistRewardDisplay.cs" />
+    <Compile Include="PoEMemory\Components\HideoutDoodad.cs" />
+    <Compile Include="PoEMemory\Components\Inventories.cs" />
+    <Compile Include="PoEMemory\Components\InventoryVisual.cs" />
+    <Compile Include="PoEMemory\Components\Life.cs" />
+    <Compile Include="PoEMemory\Components\LocalStats.cs" />
+    <Compile Include="PoEMemory\Components\Magnetic.cs" />
+    <Compile Include="PoEMemory\Components\Map.cs" />
+    <Compile Include="PoEMemory\Components\MinimapIcon.cs" />
+    <Compile Include="PoEMemory\Components\Mods.cs" />
+    <Compile Include="PoEMemory\Components\Monolith.cs" />
+    <Compile Include="PoEMemory\Components\Monster.cs" />
+    <Compile Include="PoEMemory\Components\Movement.cs" />
+    <Compile Include="PoEMemory\Components\NPC.cs" />
+    <Compile Include="PoEMemory\Components\ObjectMagicProperties.cs" />
+    <Compile Include="PoEMemory\Components\Pathfinding.cs" />
+    <Compile Include="PoEMemory\Components\Player.cs" />
+    <Compile Include="PoEMemory\Components\Portal.cs" />
+    <Compile Include="PoEMemory\Components\Positioned.cs" />
+    <Compile Include="PoEMemory\Components\Preload.cs" />
+    <Compile Include="PoEMemory\Components\Prophecy.cs" />
+    <Compile Include="PoEMemory\Components\Quality.cs" />
+    <Compile Include="PoEMemory\Components\Render.cs" />
+    <Compile Include="PoEMemory\Components\RenderItem.cs" />
+    <Compile Include="PoEMemory\Components\Sector.cs" />
+    <Compile Include="PoEMemory\Components\SentinelDrone.cs" />
+    <Compile Include="PoEMemory\Components\Shield.cs" />
+    <Compile Include="PoEMemory\Components\Shrine.cs" />
+    <Compile Include="PoEMemory\Components\SkillGem.cs" />
+    <Compile Include="PoEMemory\Components\Sockets.cs" />
+    <Compile Include="PoEMemory\Components\Stack.cs" />
+    <Compile Include="PoEMemory\Components\StateMachine.cs" />
+    <Compile Include="PoEMemory\Components\StateMachineState.cs" />
+    <Compile Include="PoEMemory\Components\Stats.cs" />
+    <Compile Include="PoEMemory\Components\Targetable.cs" />
+    <Compile Include="PoEMemory\Components\TimerComponent.cs" />
+    <Compile Include="PoEMemory\Components\Transitionable.cs" />
+    <Compile Include="PoEMemory\Components\TriggerableBlockage.cs" />
+    <Compile Include="PoEMemory\Components\Weapon.cs" />
+    <Compile Include="PoEMemory\Components\WorldDescription.cs" />
+    <Compile Include="PoEMemory\Components\WorldItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

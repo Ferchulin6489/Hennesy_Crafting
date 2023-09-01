@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Dev_H\OneDrive\Documentos\Cosas para jueguitos\PoEHelper-3.22.0.1\GameOffsets.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD5E9935-84E1-4576-A668-B80451965CED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GameOffsets</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>GameOffsets</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX.Mathematics" />
+    <Reference Include="System.Console" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" />
+    <Reference Include="System.Runtime.InteropServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="ActionWrapperOffsets.cs" />
+    <Compile Include="ActorComponentOffsets.cs" />
+    <Compile Include="ActorDeployedObject.cs" />
+    <Compile Include="ActorSkillCooldownOffsets.cs" />
+    <Compile Include="ActorSkillOffsets.cs" />
+    <Compile Include="SubActorSkillOffsets.cs" />
+    <Compile Include="AncestorFightSelectionWindowOffsets.cs" />
+    <Compile Include="AncestorShopWindowOffsets.cs" />
+    <Compile Include="AnimationControllerOffsets.cs" />
+    <Compile Include="ActiveAnimationOffsets.cs" />
+    <Compile Include="ActorAnimationListOffsets.cs" />
+    <Compile Include="ActorAnimationStageOffsets.cs" />
+    <Compile Include="AreaLoadingStateOffsets.cs" />
+    <Compile Include="ItemInfoOffsets.cs" />
+    <Compile Include="BaseComponentOffsets.cs" />
+    <Compile Include="BuffsOffsets.cs" />
+    <Compile Include="BuffOffsets.cs" />
+    <Compile Include="CameraOffsets.cs" />
+    <Compile Include="ChestComponentOffsets.cs" />
+    <Compile Include="StrongboxChestComponentData.cs" />
+    <Compile Include="ComponentArrayStructure.cs" />
+    <Compile Include="ComponentLookUpStruct.cs" />
+    <Compile Include="ComponentNameAndIndexStruct.cs" />
+    <Compile Include="ExpeditionAreaDataOffsets.cs" />
+    <Compile Include="ExpeditionSagaOffsets.cs" />
+    <Compile Include="CursorOffsets.cs" />
+    <Compile Include="DiagnosticElementArrayOffsets.cs" />
+    <Compile Include="DiagnosticElementOffsets.cs" />
+    <Compile Include="ElementFlags.cs" />
+    <Compile Include="ElementOffsets.cs" />
+    <Compile Include="EntityLabelMapOffsets.cs" />
+    <Compile Include="EntityListOffsets.cs" />
+    <Compile Include="EntityFlags.cs" />
+    <Compile Include="EntityOffsets.cs" />
+    <Compile Include="ExpeditionDetonatorInfoOffsets.cs" />
+    <Compile Include="FileInfo.cs" />
+    <Compile Include="FileInfoPadded.cs" />
+    <Compile Include="HarvestWorldObjectComponentOffsets.cs" />
+    <Compile Include="HeistBlueprintComponentOffsets.cs" />
+    <Compile Include="HeistContractComponentOffsets.cs" />
+    <Compile Include="HeistContractObjectiveOffsets.cs" />
+    <Compile Include="HeistContractRequirementOffsets.cs" />
+    <Compile Include="HeistEquipmentComponentOffsets.cs" />
+    <Compile Include="HeistEquipmentComponentDataOffsets.cs" />
+    <Compile Include="HeistEquipmentOffsets.cs" />
+    <Compile Include="IngameDataOffsets.cs" />
+    <Compile Include="IngameStateOffsets.cs" />
+    <Compile Include="IngameUIElementsOffsets.cs" />
+    <Compile Include="InitObjectOffsets.cs" />
+    <Compile Include="InventoryOffsets.cs" />
+    <Compile Include="ItemsOnGroundLabelElementOffsets.cs" />
+    <Compile Include="LifeComponentOffsets.cs" />
+    <Compile Include="VitalStruct.cs" />
+    <Compile Include="LocalStatsComponentOffsets.cs" />
+    <Compile Include="MapComponentBase.cs" />
+    <Compile Include="MapComponentInner.cs" />
+    <Compile Include="MapElement.cs" />
+    <Compile Include="MapSubElement.cs" />
+    <Compile Include="MinimapIconOffsets.cs" />
+    <Compile Include="ModsRecordOffsets.cs" />
+    <Compile Include="ModsComponentStatsOffsets.cs" />
+    <Compile Include="ModsComponentOffsets.cs" />
+    <Compile Include="NormalInventoryItemOffsets.cs" />
+    <Compile Include="ObjectHeaderOffsets.cs" />
+    <Compile Include="ObjectMagicPropertiesOffsets.cs" />
+    <Compile Include="PathEntityOffsets.cs" />
+    <Compile Include="PathfindingComponentOffsets.cs" />
+    <Compile Include="PositionedComponentOffsets.cs" />
+    <Compile Include="PurchaseWindowOffsets.cs" />
+    <Compile Include="QuestStateOffsets.cs" />
+    <Compile Include="RenderComponentOffsets.cs" />
+    <Compile Include="SanctumFloorWindowOffsets.cs" />
+    <Compile Include="SanctumFloorWindowDataOffsets.cs" />
+    <Compile Include="SkillBarIdsStruct.cs" />
+    <Compile Include="ServerPlayerDataOffsets.cs" />
+    <Compile Include="ServerDataOffsets.cs" />
+    <Compile Include="ServerDataArtifacts.cs" />
+    <Compile Include="ServerInventoryOffsets.cs" />
+    <Compile Include="ServerStashTabOffsets.cs" />
+    <Compile Include="ShortcutModifier.cs" />
+    <Compile Include="ShortcutUsage.cs" />
+    <Compile Include="Shortcut.cs" />
+    <Compile Include="SkillGemOffsets.cs" />
+    <Compile Include="GemInformation.cs" />
+    <Compile Include="SocketsComponentOffsets.cs" />
+    <Compile Include="SocketColorList.cs" />
+    <Compile Include="SocketedGemList.cs" />
+    <Compile Include="StashElementOffsets.cs" />
+    <Compile Include="StashTabContainerOffsets.cs" />
+    <Compile Include="StateMachineComponentOffsets.cs" />
+    <Compile Include="StatsComponentOffsets.cs" />
+    <Compile Include="SubStatsComponentOffsets.cs" />
+    <Compile Include="Offsets.cs" />
+    <Compile Include="SubTileStructure.cs" />
+    <Compile Include="TargetableComponentOffsets.cs" />
+    <Compile Include="TerrainData.cs" />
+    <Compile Include="TgtDetailStruct.cs" />
+    <Compile Include="TgtTileStruct.cs" />
+    <Compile Include="TileStructure.cs" />
+    <Compile Include="TooltipItemFrameElementOffsets.cs" />
+    <Compile Include="WorldDataOffsets.cs" />
+    <Compile Include="Native\MinMaxStruct.cs" />
+    <Compile Include="Native\NativeHashNode.cs" />
+    <Compile Include="Native\NativeListNode.cs" />
+    <Compile Include="Native\NativeListNodeComponent.cs" />
+    <Compile Include="Native\NativePtrArray.cs" />
+    <Compile Include="Native\NativeStringU.cs" />
+    <Compile Include="Native\NativeUtf8Text.cs" />
+    <Compile Include="Native\NativeUtf16Text.cs" />
+    <Compile Include="Native\StdListNode.cs" />
+    <Compile Include="Native\StdListNode`1.cs" />
+    <Compile Include="Native\StdList.cs" />
+    <Compile Include="Native\StdVector.cs" />
+    <Compile Include="Native\Vector2i.cs" />
+    <Compile Include="Objects\GameStateOffsets.cs" />
+    <Compile Include="Objects\StateInternalStructure.cs" />
+    <Compile Include="Components\Actor.cs" />
+    <Compile Include="Components\AreaTransitionComponentOffsets.cs" />
+    <Compile Include="Components\Armour.cs" />
+    <Compile Include="Components\ArmourInternalStruct.cs" />
+    <Compile Include="Components\AttributeRequirements.cs" />
+    <Compile Include="Components\RequirementsInternalStruct.cs" />
+    <Compile Include="Components\Chest.cs" />
+    <Compile Include="Components\ChestInternalStruct.cs" />
+    <Compile Include="Components\ComponentHeader.cs" />
+    <Compile Include="Components\Flask.cs" />
+    <Compile Include="Components\FlaskInternalStruct.cs" />
+    <Compile Include="Components\FlaskInfoStruct.cs" />
+    <Compile Include="Components\FlaskBuffsStruct.cs" />
+    <Compile Include="Components\Inventories.cs" />
+    <Compile Include="Components\InventoryInternalStruct.cs" />
+    <Compile Include="Components\Magnetic.cs" />
+    <Compile Include="Components\Monolith.cs" />
+    <Compile Include="Components\Map.cs" />
+    <Compile Include="Components\MinimapIcon.cs" />
+    <Compile Include="Components\MinimapIconInternalStruct.cs" />
+    <Compile Include="Components\Monster.cs" />
+    <Compile Include="Components\MonsterInternalStruct.cs" />
+    <Compile Include="Components\MonsterVarietiesStruct.cs" />
+    <Compile Include="Components\MonsterTypesStruct.cs" />
+    <Compile Include="Components\NPC.cs" />
+    <Compile Include="Components\NPCInternalStruct.cs" />
+    <Compile Include="Components\NPCDatStruct.cs" />
+    <Compile Include="Components\Portal.cs" />
+    <Compile Include="Components\Quality.cs" />
+    <Compile Include="Components\Shrine.cs" />
+    <Compile Include="Components\ShrineDatRowStruct.cs" />
+    <Compile Include="Components\ShrineBuffDatStruct.cs" />
+    <Compile Include="Components\SkillGem.cs" />
+    <Compile Include="Components\SkillGemInternalStruct.cs" />
+    <Compile Include="Components\Sockets.cs" />
+    <Compile Include="Components\SocketColors.cs" />
+    <Compile Include="Components\SocketGems.cs" />
+    <Compile Include="Components\SocketGemStructure.cs" />
+    <Compile Include="Components\Stack.cs" />
+    <Compile Include="Components\StackInternalStructure.cs" />
+    <Compile Include="Components\Stats.cs" />
+    <Compile Include="Components\Targetable.cs" />
+    <Compile Include="Components\TriggerableBlockage.cs" />
+    <Compile Include="Components\Weapon.cs" />
+    <Compile Include="Components\WeaponInternalStruct.cs" />
+    <Compile Include="Components\WorldItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
